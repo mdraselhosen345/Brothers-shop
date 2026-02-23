@@ -4,6 +4,7 @@ import Home from "../Component/Home/Home";
 import Banner from "../Component/Banner/Banner";
 import Card from "../Component/Card/Card";
 import Category from "../Component/Category/Category";
+import HomeService from "../Component/HomeService/HomeService";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: "Card",
                 Component: Card,
+            },
+            {
+                path: "HomeService",
+                Component: HomeService
             }
         ]
     },

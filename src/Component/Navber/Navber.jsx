@@ -54,9 +54,9 @@ const Navber = () => {
          {/* menu */}
          <div className='hidden md:flex flex flex-none pr-5'>
             <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
-                 <NavLink to="" className="hover:shadow-xl text-lg px-5 py-2 text-[#242424] rounded-same hover:scale-105">Services</NavLink>
-                 <NavLink to="" className="px-4 py-1 rounded-xl text-black transition duration-300">Projects</NavLink>
-                 <NavLink to="" className="px-4 py-1 rounded-xl text-black transition duration-300">Contact</NavLink>
+                 <NavLink to="" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Help & Support</NavLink>
+                 <NavLink to="" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Login</NavLink>
+                 <NavLink to="" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Sign Up</NavLink>
 
             </ul>
          </div>

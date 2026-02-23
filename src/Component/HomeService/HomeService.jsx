@@ -1,0 +1,75 @@
+import React from 'react'
+import ServiceBac from "../../assets/ServiceBac.png"
+import PcService from "../../assets/PcService.png"
+import ElectronicService from "../../assets/ElectronicService.png"
+import GlassService from "../../assets/GlassService.png"
+import cctvserviceing from "../../assets/cctvserviceing.png"
+import plamberServecing from "../../assets/plamberServecing.png"
+const HomeService = () => {
+  return (
+    <div className='mt-26 max-w-6xl mx-auto'>
+        <img src={ServiceBac} className='h-[350px] w-full' alt="" />
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5 mb-5 px-6'>
+                 {/* Pc Serviceing */}  
+                <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
+                   <div className="card-body">
+                    <h2 className="card-title text-black text-xl">Computer & Laptop Home Service</h2>
+                </div>
+                  <figure className='m-2 rounded-none'>
+                      <img
+                         src={PcService}
+                         alt="Shoes" />
+                   </figure>
+                </div>
+                {/* Electronic Serviceing */}
+                <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
+                   <div className="card-body">
+                    <h2 className="card-title text-black text-xl">Electrical Installation & Home Service</h2>
+                </div>
+                  <figure className='m-2 rounded-none'>
+                      <img
+                         src={ElectronicService}
+                         alt="Shoes" />
+                   </figure>
+                </div>
+                {/* CCTV Serviceing */}
+                <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
+                   <div className="card-body">
+                    <h2 className="card-title text-black text-xl">CCTV Installation & Home Services</h2>
+                </div>
+                  <figure className='m-2 rounded-none'>
+                      <img
+                         src={cctvserviceing}
+                         alt="Shoes" />
+                   </figure>
+                </div>
+                 {/* Glass Service */}
+                <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
+                   <div className="card-body">
+                    <h2 className="card-title text-black text-xl">Glass Installation & Home Services</h2>
+                </div>
+                  <figure className='m-2 rounded-none'>
+                      <img
+                         src={GlassService}
+                         alt="Shoes" />
+                   </figure>
+                </div>
+                {/* Plumbing Service */}
+                <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
+                   <div className="card-body">
+                    <h2 className="card-title text-black text-xl">Plumbing Installation & Home Service</h2>
+                </div>
+                  <figure className='m-2 rounded-none'>
+                      <img
+                         src={plamberServecing}
+                         alt="Shoes" />
+                   </figure>
+                </div>
+
+              
+         </div>
+    </div>
+  )
+}
+
+export default HomeService

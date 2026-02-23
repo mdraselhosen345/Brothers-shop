@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../Banner/Banner'
 import Card from '../Card/Card'
 import Category from '../Category/Category'
+import HomeService from '../HomeService/HomeService'
 
 const Home = () => {
   return (
@@ -10,7 +11,9 @@ const Home = () => {
        <div className='max-w-7xl mx-auto'>
            <Category></Category>
            <Card></Card>   
+           {/* <HomeService></HomeService> */}
        </div>
+       
     </div>
   )
 }
