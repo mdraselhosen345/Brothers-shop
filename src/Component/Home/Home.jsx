@@ -4,6 +4,8 @@ import Card from '../Card/Card'
 import Category from '../Category/Category'
 import HomeService from '../HomeService/HomeService'
 
+import Computer from "../HomeService/Computer";
+
 const Home = () => {
   return (
     <div className='max-w-full mx-auto'>
@@ -12,6 +14,7 @@ const Home = () => {
            <Category></Category>
            <Card></Card>   
            {/* <HomeService></HomeService> */}
+              {/* <Computer></Computer> */}
        </div>
        
     </div>

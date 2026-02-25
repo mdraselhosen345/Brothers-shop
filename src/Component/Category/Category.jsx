@@ -37,7 +37,7 @@ const Category = () => {
                 </div>
              
                   {/* HomeService */}
-             <Link to="HomeService" target="_blank">
+             <Link to="HomeService">
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Home Service</h2>
