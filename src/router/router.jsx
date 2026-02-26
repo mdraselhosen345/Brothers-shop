@@ -62,8 +62,12 @@ import Banner from "../Component/Banner/Banner";
 import Card from "../Component/Card/Card";
 import Category from "../Component/Category/Category";
 import HomeService from "../Component/HomeService/HomeService";
-import Computer from "../Component/HomeService/Computer";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
+import ElectronicService from "../Component/HomeService/ElectronicService";
+import CCTVService from "../Component/HomeService/CCTVService";
+import GlassService from "../Component/HomeService/GlassService";
+import PlumbingService from "../Component/HomeService/PlumbingService";
+import ComputerService from "../Component/HomeService/ComputerService";
 
 export const router = createBrowserRouter([
   {
@@ -80,9 +84,25 @@ export const router = createBrowserRouter([
         Component: HomeService,
         children: [
           {
-            path: "Computer",
-            Component: Computer,
+             path: "ComputerService",
+             Component: ComputerService
           },
+          {
+            path: "ElectronicService",
+            Component: ElectronicService
+          },
+          {
+            path: "CCTVService",
+            Component: CCTVService
+          },
+          {
+            path: "GlassService",
+            Component: GlassService
+          },
+          {
+            path: "PlumbingService",
+            Component: PlumbingService
+          }
         ],
       },
     ],

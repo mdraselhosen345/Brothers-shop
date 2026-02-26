@@ -3,8 +3,11 @@ import Banner from '../Banner/Banner'
 import Card from '../Card/Card'
 import Category from '../Category/Category'
 import HomeService from '../HomeService/HomeService'
-
-import Computer from "../HomeService/Computer";
+import ElectronicService from '../HomeService/ElectronicService'
+import CCTVService from '../HomeService/CCTVService'
+import GlassService from '../HomeService/GlassService'
+import PlumbingService from '../HomeService/PlumbingService'
+import ComputerService from '../HomeService/ComputerService'
 
 const Home = () => {
   return (
@@ -13,8 +16,12 @@ const Home = () => {
        <div className='max-w-7xl mx-auto'>
            <Category></Category>
            <Card></Card>   
-           {/* <HomeService></HomeService> */}
-              {/* <Computer></Computer> */}
+               {/* <HomeService></HomeService> */}
+               {/* <ComputerService></ComputerService> */}
+               {/* <ElectronicService></ElectronicService> */}
+               {/* <CCTVService></CCTVService> */}
+               {/* <GlassService></GlassService> */}
+               {/* <PlumbingService></PlumbingService> */}
        </div>
        
     </div>

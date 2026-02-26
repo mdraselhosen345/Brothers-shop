@@ -50,8 +50,7 @@ const Category = () => {
                    </figure>
                 </div>
               </Link>
-               {/* Servicing Center */}
-               <a href="">
+               {/* Servicing Center */}             
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Servicing Center</h2>
@@ -62,8 +61,7 @@ const Category = () => {
                          src={ServecingCenter}
                          alt="Shoes" />
                    </figure>
-                </div>
-               </a>
+                </div>          
          </div>
     </div>
   )

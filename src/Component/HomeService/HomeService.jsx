@@ -6,7 +6,6 @@ import GlassService from "../../assets/GlassService.png"
 import cctvserviceing from "../../assets/cctvserviceing.png"
 import plamberServecing from "../../assets/plamberServecing.png"
 
-import Computer from "../HomeService/Computer";
 import { Link, Outlet, useLocation } from 'react-router-dom'
 const HomeService = () => {
     const location = useLocation()
@@ -19,8 +18,8 @@ const HomeService = () => {
             <>
             <img src={ServiceBac} className='h-[350px] w-full' alt="" />
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5 mb-5 px-6'>
-                 {/* Pc Serviceing */}  
-                 <Link to="Computer" target="_blank">
+                 {/* ComputerServiceing */}  
+                 <Link to="ComputerService" target="_blank">
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Computer & Laptop Home Service</h2>
@@ -33,7 +32,7 @@ const HomeService = () => {
                 </div>
                  </Link>
                 {/* Electronic Serviceing */}
-                <Link>
+                <Link to="ElectronicService" target='_blank'>
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Electrical Installation & Home Service</h2>
@@ -46,6 +45,7 @@ const HomeService = () => {
                 </div>
                 </Link>
                 {/* CCTV Serviceing */}
+                <Link to="CCTVService" target='_blank'>
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">CCTV Installation & Home Services</h2>
@@ -56,7 +56,9 @@ const HomeService = () => {
                          alt="Shoes" />
                    </figure>
                 </div>
+                </Link>
                  {/* Glass Service */}
+                 <Link to="GlassService" target='_blank'>
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Glass Installation & Home Services</h2>
@@ -67,7 +69,9 @@ const HomeService = () => {
                          alt="Shoes" />
                    </figure>
                 </div>
-                {/* Plumbing Service */}
+                </Link>
+                {/* PlumbingService */}
+                <Link to="PlumbingService" target='_blank'>
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Plumbing Installation & Home Service</h2>
@@ -77,7 +81,8 @@ const HomeService = () => {
                          src={plamberServecing}
                          alt="Shoes" />
                    </figure>
-                </div>  
+                </div> 
+                </Link> 
          </div>
          </>
          )}

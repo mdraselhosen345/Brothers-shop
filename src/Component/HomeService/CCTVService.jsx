@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Computer = () => {
+const CCTVService = () => {
   return (
     <div className='border-2 border-red-500 h-[500px]'>
-      <h1>hello ami pc</h1>
+      <h1>hello ami CCTV Service</h1>
     </div>
   )
 }
 
-export default Computer
+export default CCTVService
