@@ -74,7 +74,7 @@ const HomeService = () => {
                 <Link to="PlumbingService" target='_blank'>
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
-                    <h2 className="card-title text-black text-xl">Plumbing Installation & Home Service</h2>
+                    <h2 className="card-title text-black text-xl">Plumbing & Sanitary Services</h2>
                 </div>
                   <figure className='m-2 rounded-none'>
                       <img
