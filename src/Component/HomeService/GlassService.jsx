@@ -1,5 +1,4 @@
 import React from 'react'
-// import Computer from "../../assets/Computer.png"
 import Glass from "../../assets/GLASS.png"
 import { TbCoinTaka } from "react-icons/tb";
 import { GoSmiley } from "react-icons/go";
