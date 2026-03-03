@@ -68,6 +68,7 @@ import CCTVService from "../Component/HomeService/CCTVService";
 import GlassService from "../Component/HomeService/GlassService";
 import PlumbingService from "../Component/HomeService/PlumbingService";
 import ComputerService from "../Component/HomeService/ComputerService";
+import ServicingCenter from "../Component/ServicingCenter/ServicingCenter";
 
 export const router = createBrowserRouter([
   {
@@ -79,6 +80,7 @@ export const router = createBrowserRouter([
       { path: "Banner", Component: Banner },
       { path: "Category", Component: Category },
       { path: "Card", Component: Card },
+      {path: "ServicingCenter", Component: ServicingCenter},
       {
         path: "HomeService",
         Component: HomeService,
