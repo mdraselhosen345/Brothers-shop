@@ -1,45 +1,25 @@
 import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
 import Logo from "../../assets/Logo.png"
 import { NavLink } from 'react-router';
 import { IoIosSearch } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa6";
+
 
 const Navber = () => {
-   const [open, setOpen] = useState(false)
+   const [open, setOpen] = useState(false);
+   const location = useLocation();
+
+   const isHome = location.pathname === "/";
+  const isCardPage = location.pathname.startsWith("/HomeService");
   return (
-   // <div className='max-w-full mx-auto w-full fixed top-0 left-0 right-0 z-50 shadow-xl'>
-   //   <div className="flex flex-col bg-gray-400 md:flex-row items-center justify-between px-4 md:px-10 py-3 gap-4">
-   //                 {/* logo */}
-   //                  <div className='flex justify-center md:justify-start w-full md:w-auto'>
-   //                       <img src={Logo} className='h-[60px] w-[70px]' alt="Logo"  />
-   //                  </div>
-   //                   {/* Search Bar */}
-   //                     <div className="flex w-full md:w-1/2">
-   //                                <input type="text"
-   //                                       placeholder="Search"
-   //                                        className="w-full text-black text-sm md:text-lg bg:text-lg bg-[#C4C4C4] outline-none px-4 rounded-l-lg" />
-   //                                      <IoIosSearch 
-   //                                               size={40} 
-   //                                               className="bg-[#F54927] rounded-r-sm"/>
-   //                     </div>
-   //                                 {/* Menu */}
-   //                             <div className='w-full md:w-auto'>
-   //                                 <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
-   //                                    <NavLink className="hover:shadow-xl text-sm px-5 py-2 text-[#242424] rounded-same hover:scale-105">HELP & SUPPORT</NavLink>
-   //                                    <NavLink className="hover:shadow-xl text-sm px-5 py-2 text-[#242424] rounded-same hover:scale-105">LOGIN</NavLink>
-   //                                    <NavLink className="hover:shadow-xl text-sm px-5 py-2 text-[#242424] rounded-same hover:scale-105">SIGN UP</NavLink>
-   //                                 </ul>
-   //                             </div>
-         
-                    
-                    
-   //   </div>
-   //   </div>
        <div className='navbar shadow-xl gap-10 bg-gray-400 top-0 left-0 right-0 z-50 shadow-2xl fixed'>
            {/* Logo */}
            <div className='flex-1 flex justify-center'>
                <img className='w-16 sm:w-32 md:w-24 lg:w-25 xl:w-22 h-auto' src={Logo} alt="" />
            </div>
              {/* Search Bar */}
+             {isHome && (
          <div className="flex w-full md:w-1/2">
       <input
         type="text"
@@ -51,6 +31,18 @@ const Navber = () => {
         className="bg-[#F54927] text-white px-3 py-2 rounded-r-lg cursor-pointer"
       />
         </div>
+        )}
+              {/* Card page এ Phone Number */}
+      {isCardPage && (
+        <div className='flex gap-4'>
+        <div className="text-black font-semibold text-sm md:text-base">
+          📞 01615458942
+        </div>
+        <div className="text-black font-semibold text-sm md:text-base flex gap-2">
+          <FaWhatsapp size={22} className='text-[#2DD100] font-bold'/> 01782299570
+        </div>
+        </div>
+      )}
          {/* menu */}
          <div className='hidden md:flex flex flex-none pr-5'>
             <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
