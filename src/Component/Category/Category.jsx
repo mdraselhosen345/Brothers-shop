@@ -2,8 +2,8 @@ import React from 'react'
 import CategoryPng from "../../assets/Category.png"
 import HomeService from "../../assets/HomeService.png"
 import ServecingCenter from "../../assets/ServecingCenter.png"
-import Electronic from "../../assets/Electronic.png"
-import Moden from "../../assets/Moden.png"
+import ElectronicDevice from "../../assets/ElectronicDevice.png"
+import MordanDevice from "../../assets/MordanDevice.png"
 import { Link } from 'react-router'
 const Category = () => {
   return (
@@ -17,7 +17,7 @@ const Category = () => {
                 </div>
                   <figure className='m-2 rounded-none'>
                       <img
-                         src={Moden}
+                         src={MordanDevice}
                          alt="Shoes" />
                    </figure>
                 </div>
@@ -31,7 +31,7 @@ const Category = () => {
                 </div>
                   <figure className='m-2 rounded-none'>
                       <img
-                         src={Electronic}
+                         src={ElectronicDevice}
                          alt="Shoes" />
                    </figure>
                 </div>

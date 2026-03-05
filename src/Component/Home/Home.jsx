@@ -8,6 +8,7 @@ import CCTVService from '../HomeService/CCTVService'
 import GlassService from '../HomeService/GlassService'
 import PlumbingService from '../HomeService/PlumbingService'
 import ComputerService from '../HomeService/ComputerService'
+import CardDetails from '../CardDetails/CardDetails'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
                {/* <CCTVService></CCTVService> */}
                {/* <GlassService></GlassService> */}
                {/* <PlumbingService></PlumbingService> */}
+                {/* <CardDetails></CardDetails> */}
        </div>
        
     </div>
