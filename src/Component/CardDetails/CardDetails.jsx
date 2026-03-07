@@ -1,21 +1,47 @@
 import React from 'react'
-import Logo from "../../assets/Logo.png"
+import { useState, useEffect } from "react";
+import Logo from "../../assets/Logo.png";
 
-const CardDetails = () => {
+
+const CardDetails = () => {    
+ const [product, setProduct] = useState(null);
+const [q, setQ] = useState(1);
+const [mainImg, setMainImg] = useState("");
+
+    useEffect(() => {
+    fetch("/product.json")
+    .then(res => res.json())
+    .then(data => {
+        setProduct(data);
+        setMainImg(data.images[0]);
+    });
+}, []);
+
+if(!product){
+    return <h1 className="text-center mt-20 text-xl">Loading...</h1>
+}
   return (
-    <div className='border-2 border-red-500 h-[500px] max-w-6xl mx-auto gap-2 mt-26 flex '>
-        <div className='border-2 border-bule-500 w-[400px] px-5 pt-5'>
-          <img src={Logo} className='border-2' alt="" />
-          <div className='flex border-2 h-[90px] mt-5 gap-2 px-1 py-1'>
-            <img src={Logo} className='border-2' alt="" />
-            <img src={Logo} className='border-2' alt="" />
-            <img src={Logo} className='border-2' alt="" />
-            <img src={Logo} className='border-2' alt="" />         
+    <div className='max-w-6xl mx-auto mt-26 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2'>
+            {/* left site */}
+        <div className='w-[400px] px-5 pt-5'>
+          <img src={mainImg} className='h-[350px] w-[350px]'  alt="" />
+          <div className='flex h-[90px] mt-5 gap-2 px-1 py-1'>
+              {product.images.map((img, index) => (
+                <img
+                    key={index}
+                    src={img}
+                    onClick={() => setMainImg(img)}
+                    className="w-[60px] cursor-pointer"
+                    alt=""
+                    />
+                ))}
           </div>
+
         </div>
-        <div className='border-2 border-green-500 w-[452px] px-5 pt-5'>
-              <h1 className='text-2xl font-bold text-black'>Apple Logo Label Aufkleber Sticker Badge Silver chrome color decal metal</h1>
-              <h2 className='text-2xl pt-3 text-black font-semibold'>Product Highlights</h2>
+        {/* center site */}
+        <div className='w-[530px] px-6 pt-5'>
+              <h1 className='text-md sm:text-md md:text-lg lg:text-xl mr-15 font-bold text-black'>Apple Logo Label Aufkleber Sticker Badge Silver chrome color decal metal</h1>
+              <h2 className='text-md md:text-lg lg:text-2xl pt-3 text-black font-semibold'>Product Highlights</h2>
               <h3 className='text-xl pt-3 text-black'>Description: ABC dfgjdfjgfdjkgj</h3>
               <h3 className='text-xl pt-2 text-black'>Brand: Apple</h3>
               <h3 className='text-xl pt-2 text-black'>Type:  RJ45 Connector</h3>
@@ -35,9 +61,23 @@ const CardDetails = () => {
          <h2 className='text-black pb-0.5'>(56)</h2>
          </div>
         </div>
-        <div className='w-[290px] px-3 mt-15 mb-15 bg-[#C4C4C4] rounded-xl shadow-2xl'>
-                <h4 className='text-black pt-2'>Warranty not available</h4>
-                 
+        {/* right site */}
+        <div className='w-[219px] ml-40 mt-20 mb-20 bg-[#C4C4C4] rounded-xl shadow-2xl px-3 md:full'>
+                <h4 className='text-black pt-5'>Warranty not available</h4>
+                    <div className='text-xl mt-4 text-black rounded-xl py-1 border-1'>
+                       Quantity:
+                     <button className='ml-3 mr-3 bg-blue-200 px-2 rounded-md hover:bg-blue-300' onClick={() => setQ(q - 1)}>-</button>
+                      {q}
+                     <button className='ml-3 px-2 bg-blue-200 rounded-md hover:bg-blue-300' onClick={() => setQ(q + 1)}>+</button>
+                    </div>
+                    <div className='mt-5'>
+                    <button className="text-lg bg-[#CAA821] mt-4 rounded-xl px-12 py-1 hover:bg-[#FF795E] hover:shadow-2xl">
+                            <h1 className='text-white text-center font-bold hover:text-black'>Add to cart</h1>
+                    </button>
+                    <button className="text-lg bg-[#F54927] mt-4 rounded-xl px-14 py-1 hover:bg-[#FF795E] hover:shadow-2xl">
+                            <h1 className='text-white text-center font-bold hover:text-black'>Buy Now</h1>
+                    </button>
+                   </div>         
         </div>
     </div>
   )
