@@ -7,7 +7,14 @@ const CardDetails = () => {
  const [product, setProduct] = useState(null);
 const [q, setQ] = useState(1);
 const [mainImg, setMainImg] = useState("");
-
+const [reviews, setReviews] = useState([]); 
+    //  coustomer reviews  
+   useEffect(() => {
+    fetch("/reviews.json")
+       .then(res => res.json())
+        .then(data => setReviews(data));
+   })
+    // image 
     useEffect(() => {
     fetch("/product.json")
     .then(res => res.json())
@@ -21,7 +28,8 @@ if(!product){
     return <h1 className="text-center mt-20 text-xl">Loading...</h1>
 }
   return (
-    <div className='max-w-6xl mx-auto mt-26 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-2'>
+    <div className=''>
+    <div className='max-w-6xl mx-auto mt-26 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {/* left site */}
         <div className='w-[400px] px-5 pt-5'>
           <img src={mainImg} className='h-[350px] w-[350px]'  alt="" />
@@ -31,7 +39,7 @@ if(!product){
                     key={index}
                     src={img}
                     onClick={() => setMainImg(img)}
-                    className="w-[60px] cursor-pointer"
+                    className="w-[60px] border-1 hover:border-2 border-[#F5B027] cursor-pointer"
                     alt=""
                     />
                 ))}
@@ -40,7 +48,7 @@ if(!product){
         </div>
         {/* center site */}
         <div className='w-[530px] px-6 pt-5'>
-              <h1 className='text-md sm:text-md md:text-lg lg:text-xl mr-15 font-bold text-black'>Apple Logo Label Aufkleber Sticker Badge Silver chrome color decal metal</h1>
+              <h1 className='text-md sm:text-md md:text-lg lg:text-xl mr-15 font-bold text-black'>Apple Logo Label Aufkleber Sticker Badge</h1>
               <h2 className='text-md md:text-lg lg:text-2xl pt-3 text-black font-semibold'>Product Highlights</h2>
               <h3 className='text-xl pt-3 text-black'>Description: ABC dfgjdfjgfdjkgj</h3>
               <h3 className='text-xl pt-2 text-black'>Brand: Apple</h3>
@@ -62,7 +70,7 @@ if(!product){
          </div>
         </div>
         {/* right site */}
-        <div className='w-[219px] ml-40 mt-20 mb-20 bg-[#C4C4C4] rounded-xl shadow-2xl px-3 md:full'>
+        <div className='w-[219px] sm:ml-10 md:ml-70 lg:ml-40 mt-20 mb-10 bg-[#C4C4C4] rounded-xl shadow-2xl px-3'>
                 <h4 className='text-black pt-5'>Warranty not available</h4>
                     <div className='text-xl mt-4 text-black rounded-xl py-1 border-1'>
                        Quantity:
@@ -79,6 +87,49 @@ if(!product){
                     </button>
                    </div>         
         </div>
+    </div>
+    <div className='max-w-4xl mx-auto mt-10'>
+
+          <div className='px-5'>
+            <h1 className='text-2xl text-black font-bold'>Product details of</h1>
+              <ul className='text-[#303030] px-10'>
+                 <li>Apple</li>
+                 <li>Samsung</li>
+                 <li>Huawei</li>
+              </ul>
+              <h3 className='text-xl text-[#181818] font-semibold pt-5'>Description</h3>
+              <p className='text-[#303030]'>The DELL 64GB DDR4 3200MHz RDIMM Server RAM is a high-performance memory module suited for server and workstation applications. The Dell DDR4 Server RAM has a huge capacity of 64GB, DDR4 memory technology, and a rapid speed of 3200MHz, making it excellent for demanding applications requiring high performance and dependability. This DELL 64GB DDR4 3200MHz RDIMM Server RAM module, with a capacity of 64GB, can handle even the most memory-intensive workloads, ensuring that your server or workstation has the resources it requires to run smoothly. DDR4 memory technology significantly outperforms previous generations, with quicker</p>
+            </div>
+            <div>
+      <div className="max-w-4xl mx-auto mt-10">
+      <h1 className="text-2xl font-bold mb-5 text-[#181818]">Customer Reviews</h1>
+
+     {reviews.map((review) => (
+  <div key={review.id} className="border p-4 rounded-lg mb-4 shadow-md">
+
+    <h2 className="font-bold text-lg">{review.name}</h2>
+
+    <p className="text-yellow-500">
+      {"⭐".repeat(review.rating)}
+    </p>
+
+    <p className="text-gray-600 mt-2">{review.comment}</p>
+
+    <div className="flex gap-2 mt-3">
+      {review.images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          className="w-26 h-32 object-cover rounded"
+        />
+      ))}
+    </div>
+
+  </div>
+))}
+    </div>
+            </div>
+    </div>
     </div>
   )
 }

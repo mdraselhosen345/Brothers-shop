@@ -1,0 +1,14 @@
+[
+  {
+    "id": 2,
+    "name": "Karim",
+    "rating": 4,
+    "comment": "Quality is good and delivery fast.",
+    "images": [
+        "/images/1.png",
+        "/images/2.png",
+        "/images/3.png"
+    ]
+    
+  }
+]
