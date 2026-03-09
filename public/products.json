@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple Logo Sticker",
+      "price": 165,
+      "image": [
+        "/images/apple.png"
+      ],
+      "brand": "Apple",
+      "type": " Connector",
+      "material": "Steel",
+      "color": "Red",
+      "rating": 4.6,
+      "reviews": 56,
+      "description": "High quality Apple sticker badge."
+    },
+    {
+      "id": 2,
+      "name": "Samsung LAN Connector",
+      "price": 220,
+      "image": [
+        "/images/samsung.png",
+        "/images/samsung1.png",
+        "/images/samsung2.png",
+        "/images/samsung3.png"
+      ],
+      "brand": "Samsung",
+      "type": "RJ45 Connector",
+      "material": "Steel",
+      "color": "Black",
+      "rating": 4.4,
+      "reviews": 32,
+      "description": "High quality Samsung connector."
+    }
+  ]
+}

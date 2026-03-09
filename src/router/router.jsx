@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
       { path: "Category", Component: Category },
       { path: "Card", Component: Card },
       {path: "ServicingCenter", Component: ServicingCenter},
-      {path: "CardDetails", Component: CardDetails},
+      { path: "product/:id", Component: CardDetails },
       {
         path: "HomeService",
         Component: HomeService,
