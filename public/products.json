@@ -1,11 +1,14 @@
+
 {
   "products": [
     {
       "id": 1,
       "name": "Apple Logo Sticker",
       "price": 165,
-      "image": [
-        "/images/apple.png"
+      "oldPrice": 500,
+      "images": [
+        "/images/apple.png",
+        "/images/samsung2.png"
       ],
       "brand": "Apple",
       "type": " Connector",
@@ -19,7 +22,8 @@
       "id": 2,
       "name": "Samsung LAN Connector",
       "price": 220,
-      "image": [
+      "oldPrice": 500,
+      "images": [
         "/images/samsung.png",
         "/images/samsung1.png",
         "/images/samsung2.png",

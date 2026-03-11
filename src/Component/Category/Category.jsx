@@ -10,7 +10,7 @@ const Category = () => {
     <div className='mt-3 px-6'>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                  {/* Modern Accessories */}
-             
+                  <Link to="ModernCard">
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Modern Accessories</h2>
@@ -21,9 +21,9 @@ const Category = () => {
                          alt="Shoes" />
                    </figure>
                 </div>
-            
+                   </Link>
                  {/* Electronic Accessories */}
-                         
+                <Link to="ElectronicCard">
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">
                    <div className="card-body">
                     <h2 className="card-title text-black text-xl">Electronic Accessories</h2>
@@ -35,7 +35,7 @@ const Category = () => {
                          alt="Shoes" />
                    </figure>
                 </div>
-             
+                </Link> 
                   {/* HomeService */}
              <Link to="HomeService">
                 <div className="card bg-[#DBDBDB] w-full shadow-2xl rounded-none transition-all duration-300 hover:scale-104 hover:shadow-2xl">

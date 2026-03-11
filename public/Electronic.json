@@ -1,0 +1,218 @@
+[
+{
+  "id": 1,
+  "name": "ceiling_fan_56inch",
+  "title": "56 Inch High Speed Ceiling Fan",
+  "images": [
+    "https://example.com/images/fan1.jpg",
+    "https://example.com/images/fan2.jpg",
+    "https://example.com/images/fan3.jpg"
+  ],
+  "description": "High speed 56 inch ceiling fan with strong air delivery and energy efficient motor.",
+  "brand": "Walton",
+  "type": "Ceiling Fan",
+  "material": "Metal & Plastic",
+  "color": "Brown",
+  "price": 3500,
+  "oldPrice": 4200,
+  "rating": 4.4
+},
+{
+  "id": 2,
+  "name": "led_bulb_12w",
+  "title": "12W Energy Saving LED Bulb",
+  "images": [
+    "https://example.com/images/bulb1.jpg",
+    "https://example.com/images/bulb2.jpg",
+    "https://example.com/images/bulb3.jpg"
+  ],
+  "description": "Bright 12W LED bulb with low power consumption and long lifespan.",
+  "brand": "Philips",
+  "type": "LED Bulb",
+  "material": "Plastic & Glass",
+  "color": "White",
+  "price": 250,
+  "oldPrice": 320,
+  "rating": 4.5
+},
+{
+  "id": 3,
+  "name": "table_fan_16inch",
+  "title": "16 Inch Table Fan",
+  "images": [
+    "https://example.com/images/tablefan1.jpg",
+    "https://example.com/images/tablefan2.jpg",
+    "https://example.com/images/tablefan3.jpg"
+  ],
+  "description": "Portable 16 inch table fan with adjustable speed control.",
+  "brand": "Singer",
+  "type": "Table Fan",
+  "material": "Plastic",
+  "color": "White",
+  "price": 2200,
+  "oldPrice": 2600,
+  "rating": 4.3
+},
+{
+  "id": 4,
+  "name": "led_panel_light_24w",
+  "title": "24W LED Panel Light",
+  "images": [
+    "https://example.com/images/panel1.jpg",
+    "https://example.com/images/panel2.jpg",
+    "https://example.com/images/panel3.jpg"
+  ],
+  "description": "Slim design LED panel light perfect for home and office lighting.",
+  "brand": "Osram",
+  "type": "Panel Light",
+  "material": "Aluminum & Plastic",
+  "color": "White",
+  "price": 1400,
+  "oldPrice": 1700,
+  "rating": 4.6
+},
+{
+  "id": 5,
+  "name": "exhaust_fan_10inch",
+  "title": "10 Inch Kitchen Exhaust Fan",
+  "images": [
+    "https://example.com/images/exhaust1.jpg",
+    "https://example.com/images/exhaust2.jpg",
+    "https://example.com/images/exhaust3.jpg"
+  ],
+  "description": "Powerful exhaust fan ideal for kitchen and bathroom ventilation.",
+  "brand": "Vision",
+  "type": "Exhaust Fan",
+  "material": "Plastic",
+  "color": "Grey",
+  "price": 1800,
+  "oldPrice": 2100,
+  "rating": 4.2
+},
+{
+  "id": 6,
+  "name": "smart_led_light",
+  "title": "Smart WiFi LED Light",
+  "images": [
+    "https://example.com/images/smartlight1.jpg",
+    "https://example.com/images/smartlight2.jpg",
+    "https://example.com/images/smartlight3.jpg"
+  ],
+  "description": "Smart LED light controllable via mobile app with multiple color modes.",
+  "brand": "Xiaomi",
+  "type": "Smart Light",
+  "material": "Plastic",
+  "color": "White",
+  "price": 1900,
+  "oldPrice": 2300,
+  "rating": 4.7
+},
+{
+  "id": 7,
+  "name": "wall_switch_double",
+  "title": "Double Wall Electric Switch",
+  "images": [
+    "https://example.com/images/switch1.jpg",
+    "https://example.com/images/switch2.jpg",
+    "https://example.com/images/switch3.jpg"
+  ],
+  "description": "Durable double wall switch with heat resistant design.",
+  "brand": "Havells",
+  "type": "Switch",
+  "material": "Plastic",
+  "color": "White",
+  "price": 180,
+  "oldPrice": 220,
+  "rating": 4.1
+},
+{
+  "id": 8,
+  "name": "led_tube_light_20w",
+  "title": "20W LED Tube Light",
+  "images": [
+    "https://example.com/images/tube1.jpg",
+    "https://example.com/images/tube2.jpg",
+    "https://example.com/images/tube3.jpg"
+  ],
+  "description": "Energy efficient LED tube light with bright illumination.",
+  "brand": "Panasonic",
+  "type": "Tube Light",
+  "material": "Plastic & Glass",
+  "color": "White",
+  "price": 600,
+  "oldPrice": 750,
+  "rating": 4.5
+},
+{
+  "id": 9,
+  "name": "standing_fan_18inch",
+  "title": "18 Inch Standing Fan",
+  "images": [
+    "https://example.com/images/standfan1.jpg",
+    "https://example.com/images/standfan2.jpg",
+    "https://example.com/images/standfan3.jpg"
+  ],
+  "description": "Adjustable height standing fan with strong airflow.",
+  "brand": "Walton",
+  "type": "Standing Fan",
+  "material": "Metal & Plastic",
+  "color": "Black",
+  "price": 3200,
+  "oldPrice": 3800,
+  "rating": 4.4
+},
+{
+  "id": 10,
+  "name": "led_spot_light",
+  "title": "LED Spot Light",
+  "images": [
+    "https://example.com/images/spot1.jpg",
+    "https://example.com/images/spot2.jpg",
+    "https://example.com/images/spot3.jpg"
+  ],
+  "description": "Modern LED spot light ideal for decoration and focused lighting.",
+  "brand": "Philips",
+  "type": "Spot Light",
+  "material": "Aluminum",
+  "color": "White",
+  "price": 900,
+  "oldPrice": 1100,
+  "rating": 4.3
+},
+{
+  "id": 11,
+  "name": "electric_socket_double",
+  "title": "Double Electric Power Socket",
+  "images": [
+    "https://example.com/images/socket1.jpg",
+    "https://example.com/images/socket2.jpg",
+    "https://example.com/images/socket3.jpg"
+  ],
+  "description": "Heavy duty double power socket for home and office use.",
+  "brand": "Anchor",
+  "type": "Socket",
+  "material": "Plastic",
+  "color": "White",
+  "price": 220,
+  "oldPrice": 280,
+  "rating": 4.2
+},
+{
+  "id": 12,
+  "name": "led_flood_light_50w",
+  "title": "50W Outdoor LED Flood Light",
+  "images": [
+    "https://example.com/images/flood1.jpg",
+    "https://example.com/images/flood2.jpg",
+    "https://example.com/images/flood3.jpg"
+  ],
+  "description": "Waterproof outdoor LED flood light suitable for garden and security lighting.",
+  "brand": "Osram",
+  "type": "Flood Light",
+  "material": "Aluminum & Glass",
+  "color": "Black",
+  "price": 2600,
+  "oldPrice": 3100,
+  "rating": 4.6
+}
+]

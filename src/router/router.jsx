@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Component/Home/Home";
 import Banner from "../Component/Banner/Banner";
-import Card from "../Component/Card/Card";
+import Card from "../Component/Card/ModernCard";
 import Category from "../Component/Category/Category";
 import HomeService from "../Component/HomeService/HomeService";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
@@ -15,6 +15,8 @@ import PlumbingService from "../Component/HomeService/PlumbingService";
 import ComputerService from "../Component/HomeService/ComputerService";
 import ServicingCenter from "../Component/ServicingCenter/ServicingCenter";
 import CardDetails from "../Component/CardDetails/CardDetails";
+import ModernCard from "../Component/Card/ModernCard";
+import ElectronicCard from "../Component/Card/ElectronicCard";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +27,8 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "Banner", Component: Banner },
       { path: "Category", Component: Category },
-      { path: "Card", Component: Card },
+      { path: "ModernCard", Component: ModernCard },
+      {path: "ElectronicCard", Component: ElectronicCard},
       {path: "ServicingCenter", Component: ServicingCenter},
       { path: "product/:id", Component: CardDetails },
       {
