@@ -12,6 +12,9 @@ const Navber = () => {
 
    const isHome = location.pathname === "/";
   const isCardPage = location.pathname.startsWith("/HomeService");
+
+  const showSearchPages = ["/ElectronicCard", "/ModernCard"];
+    const showSearch = showSearchPages.includes(location.pathname);
   return (
        <div className='navbar shadow-xl gap-10 bg-gray-400 top-0 left-0 right-0 z-50 shadow-2xl fixed'>
            {/* Logo */}
@@ -19,7 +22,7 @@ const Navber = () => {
                <img className='w-16 sm:w-32 md:w-24 lg:w-25 xl:w-22 h-auto' src={Logo} alt="" />
            </div>
              {/* Search Bar */}
-             {isHome && (
+        {isHome && (
          <div className="flex w-full md:w-1/2">
       <input
         type="text"
@@ -32,7 +35,21 @@ const Navber = () => {
       />
         </div>
         )}
-              {/* Card page এ Phone Number */}
+         {/* show secrch */}
+         {showSearch && (
+  <div className="flex w-full md:w-1/2">
+    <input
+      type="text"
+      placeholder="Search"
+      className="w-full text-black text-sm md:text-lg bg-[#C4C4C4] outline-none px-4 py-2 rounded-l-lg"
+    />
+    <IoIosSearch
+      size={44}
+      className="bg-[#F54927] text-white px-3 py-2 rounded-r-lg cursor-pointer"
+    />
+  </div>
+)}
+              {/* Card page hide  Phone Number */}
       {isCardPage && (
         <div className='flex gap-4'>
         <div className="text-black font-semibold text-sm md:text-base">

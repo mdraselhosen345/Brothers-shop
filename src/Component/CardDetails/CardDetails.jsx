@@ -10,6 +10,7 @@ const CardDetails = () => {
   const [mainImg, setMainImg] = useState("");
   const discount = product && product.oldPrice ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0;
  
+
   // Product fetch
   useEffect(() => {
     fetch("/products.json")

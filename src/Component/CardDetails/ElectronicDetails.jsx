@@ -28,8 +28,9 @@ const ElectronicDetails = () => {
 
   return (
     <div>
-        {/* image section  */}
+        
       <div className="max-w-6xl mx-auto mt-26 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+         {/* image section  */}
 <div className="w-[400px] px-5 pt-5">
   <img src={mainImg} className="h-[350px] w-[350px]" alt="" />
 
