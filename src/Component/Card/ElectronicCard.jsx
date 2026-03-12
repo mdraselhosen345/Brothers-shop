@@ -4,7 +4,7 @@ import LogoPng from '../../assets/Logo.png'
 import { FaCartShopping } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
-import electronic from "../data/products.json"
+
 
 const ElectronicCard = () => {
 //   const [products, setProducts] = useState([]);
@@ -13,7 +13,7 @@ const ElectronicCard = () => {
   useEffect(() => {
     fetch("/Electronic.json")
      .then(res => res.json())
-     .then(data => setElectronic(data.electronic));
+     .then(data => setElectronic(data));
   }, []);
 
   return (

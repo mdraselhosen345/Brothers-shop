@@ -1,6 +1,4 @@
-
 import { createBrowserRouter } from "react-router-dom";
-
 import Layout from "../Layout/Layout";
 import Home from "../Component/Home/Home";
 import Banner from "../Component/Banner/Banner";
@@ -17,6 +15,7 @@ import ServicingCenter from "../Component/ServicingCenter/ServicingCenter";
 import CardDetails from "../Component/CardDetails/CardDetails";
 import ModernCard from "../Component/Card/ModernCard";
 import ElectronicCard from "../Component/Card/ElectronicCard";
+import ElectronicDetails from "../Component/CardDetails/ElectronicDetails";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +30,7 @@ export const router = createBrowserRouter([
       {path: "ElectronicCard", Component: ElectronicCard},
       {path: "ServicingCenter", Component: ServicingCenter},
       { path: "product/:id", Component: CardDetails },
+      { path: "Electronic/:id", Component: ElectronicDetails},
       {
         path: "HomeService",
         Component: HomeService,

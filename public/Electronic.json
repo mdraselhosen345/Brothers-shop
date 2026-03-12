@@ -1,4 +1,5 @@
-[
+
+[ 
 {
   "id": 1,
   "name": "ceiling_fan_56inch",
@@ -15,7 +16,8 @@
   "color": "Brown",
   "price": 3500,
   "oldPrice": 4200,
-  "rating": 4.4
+  "rating": 4.4,
+  "reviews": 56
 },
 {
   "id": 2,
@@ -33,7 +35,8 @@
   "color": "White",
   "price": 250,
   "oldPrice": 320,
-  "rating": 4.5
+  "rating": 4.5,
+  "reviews": 50
 },
 {
   "id": 3,
@@ -51,7 +54,8 @@
   "color": "White",
   "price": 2200,
   "oldPrice": 2600,
-  "rating": 4.3
+  "rating": 4.3,
+  "reviews": 30
 },
 {
   "id": 4,
