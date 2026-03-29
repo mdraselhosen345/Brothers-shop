@@ -6,7 +6,7 @@ import { FaRegStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 
 
-const ElectronicCard = () => {
+const ElectronicCard = ({ search }) => {
 //   const [products, setProducts] = useState([]);
   const [electronic, setElectronic] = useState([]);
 
@@ -16,10 +16,15 @@ const ElectronicCard = () => {
      .then(data => setElectronic(data));
   }, []);
 
+  const filteredProducts = electronic.filter((product) =>
+    product.name?.toLowerCase().includes(search?.toLowerCase() || "")
+  );
+
   return (
         <div className='pt-26 mb-15 px-4'>
              <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  gap-3'>
-               {electronic.map(electronic => (
+               {filteredProducts.length > 0 ? (
+                 filteredProducts.map(electronic => (
                       <Link to={`/electronic/${electronic.id}`} key={electronic.id}>
                         <div className="card bg-base-100 w-full shadow-sm rounded-b-none overflow-hidden transform transition duration-400 hover:scale-101 hover:shadow-xl">
                            <figure>                    
@@ -51,6 +56,11 @@ const ElectronicCard = () => {
                        </div>
                     </Link>
                ))
+              ) : (
+                          <p className="col-span-full text-center text-gray-500 mt-10">
+            No product found 😢
+          </p>
+              )
 
                }
 

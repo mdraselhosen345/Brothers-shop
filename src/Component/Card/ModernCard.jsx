@@ -5,19 +5,29 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 
-const ModernCard = () => {
+const ModernCard = ({ search }) => {
   const [products, setProducts] = useState([]);
 
+
   useEffect(() => {
-    fetch("/products.json")
+    fetch("/Modern.json")
      .then(res => res.json())
-     .then(data => setProducts(data.products));
+     .then(data => {
+      console.log("JSON DATA:", data);
+      setProducts(data.products || data);
+     });
   }, []);
+
+const filteredProducts = products.filter(product =>
+  product.name?.toLowerCase().includes(search?.toLowerCase() || "")
+);
 
   return (
         <div className='pt-26 mb-15 px-4'>
              <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  gap-3'>
-               {products.map(product => (
+
+               {filteredProducts.length > 0 ? (
+                  filteredProducts.map(product => (
                       <Link to={`/product/${product.id}`} key={product.id}>
                         <div className="card bg-base-100 w-full shadow-sm rounded-b-none overflow-hidden transform transition duration-400 hover:scale-101 hover:shadow-xl">
                            <figure>                    
@@ -49,8 +59,11 @@ const ModernCard = () => {
                        </div>
                     </Link>
                ))
-
-               }
+             ) : (
+          <p className="col-span-full text-center text-gray-500 mt-10">
+            No product found 😢
+          </p>
+              ) }
 
              </div>
         </div>

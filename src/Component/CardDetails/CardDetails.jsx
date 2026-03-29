@@ -13,7 +13,7 @@ const CardDetails = () => {
 
   // Product fetch
   useEffect(() => {
-    fetch("/products.json")
+    fetch("/Modern.json")
       .then((res) => res.json())
       .then((data) => {
         const foundProduct = data.products.find((p) => p.id == id); 

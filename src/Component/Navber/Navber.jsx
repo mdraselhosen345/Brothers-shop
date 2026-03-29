@@ -1,47 +1,39 @@
 import React, { useState } from 'react';
 import { useLocation } from "react-router-dom";
 import Logo from "../../assets/Logo.png"
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
 
 
-const Navber = () => {
+const Navber = ({ search, setSearch }) => {
+console.log("Navber props:", { search, setSearch });
+
    const [open, setOpen] = useState(false);
    const location = useLocation();
 
-   const isHome = location.pathname === "/";
+  const isHome = location.pathname === "/";
   const isCardPage = location.pathname.startsWith("/HomeService");
 
   const showSearchPages = ["/ElectronicCard", "/ModernCard"];
-    const showSearch = showSearchPages.includes(location.pathname);
+  const showSearch = showSearchPages.includes(location.pathname);
+
   return (
        <div className='navbar shadow-xl gap-10 bg-gray-400 top-0 left-0 right-0 z-50 shadow-2xl fixed'>
            {/* Logo */}
            <div className='flex-1 flex justify-center'>
                <img className='w-16 sm:w-32 md:w-24 lg:w-25 xl:w-22 h-auto' src={Logo} alt="" />
            </div>
-             {/* Search Bar */}
-        {isHome && (
-         <div className="flex w-full md:w-1/2">
-      <input
-        type="text"
-        placeholder="Search"
-        className="w-full text-black text-sm md:text-lg bg-[#C4C4C4] outline-none px-4 py-2 rounded-l-lg"
-      />
-      <IoIosSearch
-        size={44}
-        className="bg-[#F54927] text-white px-3 py-2 rounded-r-lg cursor-pointer"
-      />
-        </div>
-        )}
-         {/* show secrch */}
-         {showSearch && (
+
+         {/* Search Bar */}
+      {(isHome || showSearch) && (
   <div className="flex w-full md:w-1/2">
     <input
       type="text"
       placeholder="Search"
       className="w-full text-black text-sm md:text-lg bg-[#C4C4C4] outline-none px-4 py-2 rounded-l-lg"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
     />
     <IoIosSearch
       size={44}
@@ -49,8 +41,9 @@ const Navber = () => {
     />
   </div>
 )}
+
               {/* Card page hide  Phone Number */}
-      {isCardPage && (
+       {isCardPage && (
         <div className='flex gap-4'>
         <div className="text-black font-semibold text-sm md:text-base">
           📞 01615458942
@@ -59,7 +52,10 @@ const Navber = () => {
           <FaWhatsapp size={22} className='text-[#2DD100] font-bold'/> 01782299570
         </div>
         </div>
-      )}
+      )} 
+
+
+
          {/* menu */}
          <div className='hidden md:flex flex flex-none pr-5'>
             <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
@@ -69,6 +65,8 @@ const Navber = () => {
 
             </ul>
          </div>
+
+
          {/*mobail menu button */}
          <div className='md:hidden'>
              <button className='btn btn-square btn-ghost' onClick={() => setOpen(!open)}>
@@ -88,6 +86,8 @@ const Navber = () => {
                </svg>
              </button>
          </div>
+
+
          {/* Mobile Dropdown */}
          {open && (
             <div className='absolute top-16 right-4 bg-gray-400 shadow-md w-full pl-10 pt-5 z-50 grid grid-cols'>
