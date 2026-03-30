@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 
 const Banner = () => {
     const slides = [
-    "https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp",
-    "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
-    "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
-    "https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp",
+    "https://i.ibb.co.com/LdzPk9Sz/2.png", 
+     "https://i.ibb.co.com/5XxdYzFk/3.png",
+    "https://i.ibb.co.com/VcDm9fnT/E6-S-TWS-Bluetooth-1.png",
+    "https://i.ibb.co.com/KjZrqXYs/E6-S-TWS-Bluetooth-3.png",
     ];
     
     const [current, setCurrent] = useState(0);

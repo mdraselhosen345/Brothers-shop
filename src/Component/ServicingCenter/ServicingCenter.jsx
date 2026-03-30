@@ -6,9 +6,9 @@ import { MdOutlineAccessTime } from "react-icons/md";
 
 const ServicingCenter = () => {
     const slides = [
-    "https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp",
-    "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
-    "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
+    "https://i.ibb.co.com/5XxdYzFk/3.png",
+    // "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
+    // "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
     "https://i.postimg.cc/FKDrdZ2W/Chat-GPT-Image-Mar-4-2026-10-36-01-AM.png",
     ];
     
