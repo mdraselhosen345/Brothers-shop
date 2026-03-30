@@ -16,6 +16,7 @@ import CardDetails from "../Component/CardDetails/CardDetails";
 import ModernCard from "../Component/Card/ModernCard";
 import ElectronicCard from "../Component/Card/ElectronicCard";
 import ElectronicDetails from "../Component/CardDetails/ElectronicDetails";
+import Support from "../Component/Help&Support/Support";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       {path: "ServicingCenter", Component: ServicingCenter},
       { path: "product/:id", Component: CardDetails },
       { path: "Electronic/:id", Component: ElectronicDetails},
+      {path: "Support", Component: Support},
       {
         path: "HomeService",
         Component: HomeService,
