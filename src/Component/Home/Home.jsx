@@ -11,6 +11,7 @@ import CardDetails from '../CardDetails/CardDetails'
 import ModernCard from '../Card/ModernCard'
 import ElectronicCard from "../Card/ElectronicCard"
 import Support from '../Help&Support/Support'
+import Contact from '../Help&Support/Contact'
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
                 {/* <CardDetails></CardDetails> */}
                 
                 {/* <Support></Support> */}
+                {/* <Contact></Contact> */}
        </div>
        
     </div>
