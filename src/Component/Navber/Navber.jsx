@@ -60,7 +60,7 @@ console.log("Navber props:", { search, setSearch });
          <div className='hidden md:flex flex flex-none pr-5'>
             <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
                  <NavLink to="/Support" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Help & Support</NavLink>
-                 <NavLink to="" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Login</NavLink>
+                 <NavLink to="/Login" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Login</NavLink>
                  <NavLink to="" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Sign Up</NavLink>
 
             </ul>
@@ -92,7 +92,7 @@ console.log("Navber props:", { search, setSearch });
          {open && (
             <div className='absolute top-16 right-4 bg-gray-400 shadow-md w-full pl-10 pt-5 z-50 grid grid-cols'>
                               <NavLink to="/Support" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Help & Support</NavLink>
-                              <NavLink to="" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Login</NavLink>
+                              <NavLink to="/Login" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Login</NavLink>
                               <NavLink to="" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Sign Up</NavLink>  
              </div>
          )}

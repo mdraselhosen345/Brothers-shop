@@ -24,7 +24,7 @@ const ServicingCenter = () => {
 
   return (  
      <div>
-    <div className='w-full h-40 sm:h-60 md:h-72 lg:h-[400px] relative overflow-hidden mt-16'>
+    <div className='w-full h-40 sm:h-60 md:h-72 lg:h-[400px] relative overflow-hidden mt-20'>
   {slides.map((slide, index) => (
     <div
       key={index}

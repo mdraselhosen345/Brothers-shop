@@ -23,6 +23,7 @@ import LiveChat from "../Component/Help&Support/LiveChat";
 import FeedBack from "../Component/Help&Support/FeedBack";
 import Account from "../Component/Help&Support/Account";
 import HelpCenter from "../Component/Help&Support/HelpCenter";
+import Login from "../Component/Login/Login";
 
 
 export const router = createBrowserRouter([
@@ -39,6 +40,8 @@ export const router = createBrowserRouter([
       {path: "ServicingCenter", Component: ServicingCenter},
       { path: "product/:id", Component: CardDetails },
       { path: "Electronic/:id", Component: ElectronicDetails},
+
+      { path: "Login", Component: Login},
       // help & Support
       {
   path: "Support", 
