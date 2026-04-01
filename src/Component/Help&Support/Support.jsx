@@ -5,18 +5,22 @@ import { FcFeedback } from "react-icons/fc";
 import { FcBusinessContact } from "react-icons/fc";
 import { MdManageAccounts } from "react-icons/md";
 import { MdHelpCenter } from "react-icons/md";
-import { Link } from 'react-router';
+import { Outlet, Link, useLocation } from 'react-router-dom';
+
+
 
 const Support = () => {
+    const location = useLocation();
+
   return (
     
     <div className='h-[600px] mt-20 max-w-6xl mx-auto'>
       <div className='text-center '>
         <h1 className='pt-20 text-5xl font-bold text-[#0047AB]'>Help & Support</h1>
       </div>
-
+      {location.pathname === "/Support" ? (
 <div className='grid grid-cols-3 gap-10 pt-15'>
- <Link to="/Contact">
+  <Link to="/Support/Contact">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -28,6 +32,7 @@ const Support = () => {
 </div>
 </Link>
 
+   <Link to="/Support/FAQs">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -37,7 +42,9 @@ const Support = () => {
       
   </div>
 </div>
+</Link>
 
+   <Link to="/Support/LiveChat">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -47,7 +54,9 @@ const Support = () => {
       
   </div>
 </div>
+ </Link>
 
+ <Link to="/Support/FeedBack">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -57,7 +66,9 @@ const Support = () => {
       
   </div>
 </div>
+</Link>
 
+  <Link to="/Support/Account">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -67,7 +78,9 @@ const Support = () => {
       
   </div>
 </div>
+</Link>
 
+<Link to="/Support/HelpCenter">
   <div className="card bg-[#C4C4C4] w-96 shadow-2xl hover:scale-102 transition duration-300">
   <div className="card-body text-center items-center">
     
@@ -77,8 +90,12 @@ const Support = () => {
       
   </div>
 </div>
+</Link>
 
       </div>
+            ) : (
+        <Outlet />
+      )}
     </div>
     
   )

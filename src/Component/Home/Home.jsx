@@ -12,6 +12,7 @@ import ModernCard from '../Card/ModernCard'
 import ElectronicCard from "../Card/ElectronicCard"
 import Support from '../Help&Support/Support'
 import Contact from '../Help&Support/Contact'
+import FAQs from '../Help&Support/FAQs'
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
                 
                 {/* <Support></Support> */}
                 {/* <Contact></Contact> */}
+                {/* <FAQs></FAQs> */}
        </div>
        
     </div>

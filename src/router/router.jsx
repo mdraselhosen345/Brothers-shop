@@ -17,7 +17,13 @@ import ModernCard from "../Component/Card/ModernCard";
 import ElectronicCard from "../Component/Card/ElectronicCard";
 import ElectronicDetails from "../Component/CardDetails/ElectronicDetails";
 import Support from "../Component/Help&Support/Support";
+import FAQs from "../Component/Help&Support/FAQs";
 import Contact from "../Component/Help&Support/Contact";
+import LiveChat from "../Component/Help&Support/LiveChat";
+import FeedBack from "../Component/Help&Support/FeedBack";
+import Account from "../Component/Help&Support/Account";
+import HelpCenter from "../Component/Help&Support/HelpCenter";
+
 
 export const router = createBrowserRouter([
   {
@@ -33,17 +39,20 @@ export const router = createBrowserRouter([
       {path: "ServicingCenter", Component: ServicingCenter},
       { path: "product/:id", Component: CardDetails },
       { path: "Electronic/:id", Component: ElectronicDetails},
+      // help & Support
       {
-        path: "Support", 
-        Component: Support,
-        children: [
-          {
-            path: "Contact",
-            Component: Contact
-          }
-        ]
-      },
-
+  path: "Support", 
+  Component: Support,
+  children: [
+    { path: "Contact", Component: Contact },
+    { path: "FAQs", Component: FAQs },
+    {path: "LiveChat", Component: LiveChat},
+    {path: "Feedback", Component: FeedBack},
+    {path: "Account", Component: Account},
+    {path: "HelpCenter", Component: HelpCenter}
+  ]
+},
+      //  HomeService
       {
         path: "HomeService",
         Component: HomeService,
