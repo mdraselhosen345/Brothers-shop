@@ -24,6 +24,7 @@ import FeedBack from "../Component/Help&Support/FeedBack";
 import Account from "../Component/Help&Support/Account";
 import HelpCenter from "../Component/Help&Support/HelpCenter";
 import Login from "../Component/Login/Login";
+import CreateAccount from "../Component/Login/CreateAccount";
 
 
 export const router = createBrowserRouter([
@@ -42,6 +43,7 @@ export const router = createBrowserRouter([
       { path: "Electronic/:id", Component: ElectronicDetails},
 
       { path: "Login", Component: Login},
+      { path: "CreateAccount", Component: CreateAccount},
       // help & Support
       {
   path: "Support", 

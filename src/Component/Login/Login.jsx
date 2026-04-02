@@ -2,18 +2,53 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div className='mx-auto max-w-5xl border-2 border-red-500 mt-26 '>
-  <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-  <legend className="fieldset-legend">Login</legend>
 
-  <label className="label">Email</label>
-  <input type="email" className="input" placeholder="Email" />
+    <div className='flex items-center justify-center h-screen mt-14 px-4'>
+      <div className="bg-[#C4C4C4] shadow-2xl rounded-2xl p-8 w-sm">
+    
+    <h2 className="text-2xl font-bold text-center mb-6 text-black">Login Now</h2>
 
-  <label className="label">Password</label>
-  <input type="password" className="input" placeholder="Password" />
+    <form>
+      
+      {/* Email */} 
+      <div className="mb-4 text-[#3B3B3B]">
+        <label class="block mb-1 text-md">Email</label>
+        <input type="email" placeholder="Enter your email"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      </div>
 
-  <button className="btn btn-neutral mt-4">Login</button>
-</fieldset>
+     {/* Password */}
+      <div className="mb-4 text-[#3B3B3B]">
+        <label class="block mb-1 text-md">Password</label>
+        <input type="password" placeholder="Enter your password"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      </div>
+
+            {/* Extra  */}
+      <div class="text-end text-sm">
+        <a href="#" class="text-[#D10000]">Forgot Password?</a>
+      </div>
+
+    {/* Button  */}
+      <button
+        class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition mb-5">
+        Login
+      </button>
+
+       <p class="text-center text-sm text-[#242424]">
+        Don’t have an account?
+      </p>
+
+      <div className="btn btn-outline btn-primary w-full py-2 mt-2 rounded-lg ">
+        
+        <a href="/CreateAccount" className="">Create Your Account</a>
+      </div>
+          
+     <div class="text-end text-sm">
+        <a href="#" class="text-[#D10000]">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
     </div>
   )
 }
