@@ -25,6 +25,7 @@ import Account from "../Component/Help&Support/Account";
 import HelpCenter from "../Component/Help&Support/HelpCenter";
 import Login from "../Component/Login/Login";
 import CreateAccount from "../Component/Login/CreateAccount";
+import Checkout from "../Component/Checkout/Checkout";
 
 
 export const router = createBrowserRouter([
@@ -44,6 +45,8 @@ export const router = createBrowserRouter([
 
       { path: "Login", Component: Login},
       { path: "CreateAccount", Component: CreateAccount},
+
+      { path: "Checkout", Component: Checkout},
       // help & Support
       {
   path: "Support", 

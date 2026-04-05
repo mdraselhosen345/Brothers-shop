@@ -44,9 +44,6 @@ const Login = () => {
         <a href="/CreateAccount" className="">Create Your Account</a>
       </div>
           
-     <div class="text-end text-sm">
-        <a href="#" class="text-[#D10000]">Forgot Password?</a>
-      </div>
     </form>
   </div>
     </div>

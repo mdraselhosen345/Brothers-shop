@@ -19,7 +19,7 @@ const Banner = () => {
 
 
   return (
-    <div className='carousel w-full h-18 sm:h-64 md:h-50 lg:h-[350px] relative overflow-hidden mt-16 md:mt-16 lg:mt-20'>
+    <div className='carousel w-full h-38 sm:h-64 md:h-50 lg:h-[350px] relative overflow-hidden mt-16 md:mt-16 lg:mt-20'>
           {slides.map((slide, index) => (
              <div 
                  key={index}

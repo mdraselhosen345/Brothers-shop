@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const ElectronicDetails = () => {
   const { id } = useParams();  
@@ -8,6 +9,16 @@ const ElectronicDetails = () => {
   const [q, setQ] = useState(1);
   const [mainImg, setMainImg] = useState("");
   const discount = electronic && electronic.oldPrice ? Math.round(((electronic.oldPrice - electronic.price) / electronic.oldPrice) * 100) : 0;
+
+
+
+// buy handle 
+const navigate = useNavigate();
+const handleBuyNow = () => {
+  navigate("/checkout", {
+    state: { electronic, quantity: q }
+  });
+};
  
   // Product fetch
   useEffect(() => {
@@ -141,11 +152,11 @@ const ElectronicDetails = () => {
                 Add to cart
               </h1>
             </button>
-            <button className="text-lg bg-[#F54927] mt-4 rounded-xl px-14 py-1 hover:bg-[#FF795E] hover:shadow-2xl">
-              <h1 className="text-white text-center font-bold hover:text-black">
-                Buy Now
-              </h1>
-            </button>
+
+            <button
+                  onClick={handleBuyNow}
+                  className="text-lg bg-[#F54927] mt-4 rounded-xl px-14 py-1 hover:bg-[#FF795E] hover:shadow-2xl text-white text-center font-bold hover:text-black"
+            >Buy Now</button>
           </div>
         </div>
         

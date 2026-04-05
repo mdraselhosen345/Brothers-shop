@@ -4,6 +4,7 @@ import Logo from "../../assets/Logo.png"
 import { NavLink } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
+import { TiShoppingCart } from "react-icons/ti";
 
 
 const Navber = ({ search, setSearch }) => {
@@ -60,8 +61,8 @@ console.log("Navber props:", { search, setSearch });
          <div className='hidden md:flex flex flex-none pr-5'>
             <ul className='flex flex-col md:flex-row items-center gap-3 md:gap-5'>
                  <NavLink to="/Support" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Help & Support</NavLink>
-                 <NavLink to="/Login" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Login</NavLink>
-                 <NavLink to="" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Sign Up</NavLink>
+                 <NavLink to="/Login" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105">Account</NavLink>
+                 <NavLink to="" target="_blank" className="hover:shadow-xl text-base px-5 py-2 text-[#242424] rounded-same hover:scale-105 flex"><TiShoppingCart size={30}/> Cart</NavLink>
 
             </ul>
          </div>
@@ -92,8 +93,8 @@ console.log("Navber props:", { search, setSearch });
          {open && (
             <div className='absolute top-16 right-4 bg-gray-400 shadow-md w-full pl-10 pt-5 z-50 grid grid-cols'>
                               <NavLink to="/Support" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Help & Support</NavLink>
-                              <NavLink to="/Login" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Login</NavLink>
-                              <NavLink to="" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Sign Up</NavLink>  
+                              <NavLink to="/Login" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300">Account</NavLink>
+                              <NavLink to="" className=" px-4 py-1 rounded-xl hover:text-white transition duration-300 flex gap-1"><TiShoppingCart size={20}/>Cart</NavLink>  
              </div>
          )}
 
