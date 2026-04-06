@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import BkashPng from "../../assets/Bkash.webp";
+import NogodPng from "../../assets/Nogod.png"
 
 const Checkout = () => {
   const { state } = useLocation();
@@ -69,7 +71,7 @@ const Checkout = () => {
           Shipping & Billing
         </h1>
 
-        <form onSubmit={handleOrder} className="flex flex-col gap-4">
+        <form onSubmit={handleOrder} className="flex flex-col gap-4 text-[#525252]">
           <input
             type="text"
             name="name"
@@ -155,9 +157,6 @@ const Checkout = () => {
             </label>
           </div>
            </div>
-           <div>
-            <h2>nogod</h2>
-           </div>
           <button
             type="submit"
             className="bg-green-500 text-white py-2 mt-5 rounded hover:bg-green-600 transition"
@@ -166,6 +165,16 @@ const Checkout = () => {
           </button>
         </form>
       </div>
+            <div className="shadow-xl mt-5 max-w-xl mx-auto mb-3">
+                   <h1 className="text-xl pt-3 pl-3 text-[#242424]">We Accept :</h1>
+                     <div className="pt-2 pl-2 text-lg flex gap-5 text-[#3B3B3B]">              
+                          <h3 className="">Dutch-Bangla</h3>
+                          <h3><img className="w-15 border-1" src={BkashPng} alt="" /></h3>
+                          <h3><img className="w-15 border-1" src={NogodPng} alt="" /></h3>
+                          <h3>Nogod</h3> 
+                          <h3>Roket</h3> 
+                    </div>
+           </div>
     </div>
   );
 };
