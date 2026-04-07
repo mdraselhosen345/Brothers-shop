@@ -13,6 +13,7 @@ import ElectronicCard from "../Card/ElectronicCard"
 import Support from '../Help&Support/Support'
 import Contact from '../Help&Support/Contact'
 import FAQs from '../Help&Support/FAQs'
+import AdminLayout from '../../admin/AdminLayout/AdminLayout'
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
                 {/* <Support></Support> */}
                 {/* <Contact></Contact> */}
                 {/* <FAQs></FAQs> */}
+                {/* <AdminLayout></AdminLayout> */}
        </div>
        
     </div>

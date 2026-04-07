@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import BkashPng from "../../assets/Bkash.webp";
-import NogodPng from "../../assets/Nogod.png"
+import NogodPng from "../../assets/Nogod.png";
+import DutchBanglaPng from "../../assets/DutchBangla.png"
 
 const Checkout = () => {
   const { state } = useLocation();
@@ -167,12 +168,10 @@ const Checkout = () => {
       </div>
             <div className="shadow-xl mt-5 max-w-xl mx-auto mb-3">
                    <h1 className="text-xl pt-3 pl-3 text-[#242424]">We Accept :</h1>
-                     <div className="pt-2 pl-2 text-lg flex gap-5 text-[#3B3B3B]">              
-                          <h3 className="">Dutch-Bangla</h3>
-                          <h3><img className="w-15 border-1" src={BkashPng} alt="" /></h3>
-                          <h3><img className="w-15 border-1" src={NogodPng} alt="" /></h3>
-                          <h3>Nogod</h3> 
-                          <h3>Roket</h3> 
+                     <div className="pt-2 pl-2 text-lg flex gap-5 text-[#3B3B3B]">                           
+                          <h3><img className="w-35 h-10" src={DutchBanglaPng} alt="" /></h3>
+                          <h3><img className="w-15" src={BkashPng} alt="" /></h3>
+                          <h3><img className="w-15" src={NogodPng} alt="" /></h3>
                     </div>
            </div>
     </div>

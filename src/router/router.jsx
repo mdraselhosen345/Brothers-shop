@@ -26,6 +26,19 @@ import HelpCenter from "../Component/Help&Support/HelpCenter";
 import Login from "../Component/Login/Login";
 import CreateAccount from "../Component/Login/CreateAccount";
 import Checkout from "../Component/Checkout/Checkout";
+import AdminLayout from "../admin/AdminLayout/AdminLayout";
+import Dashboard from "../admin/AdminLayout/Dashboard";
+import AddProduct from "../admin/AdminLayout/AddProduct";
+import Products from "../admin/AdminLayout/Products";
+import Orders from "../admin/AdminLayout/Orders";
+import Homeservice from "../admin/AdminLayout/Service";
+import Service from "../admin/AdminLayout/Service";
+import AddModanCard from "../admin/AdminLayout/AddModanCard";
+
+
+
+
+
 
 
 export const router = createBrowserRouter([
@@ -81,12 +94,22 @@ export const router = createBrowserRouter([
             path: "GlassService",
             Component: GlassService
           },
-          {
-            path: "PlumbingService",
-            Component: PlumbingService
-          },
         ],
       },
+
+      // admin penel
+    {
+      path: "admin",
+      Component: AdminLayout,
+      children:[
+       { path: "dashboard", Component: Dashboard },
+       { path: "add-product", Component: AddProduct },
+       { path: "add-modancard", Component: AddModanCard},
+       { path: "products", Component: Products },
+       { path: "orders", Component: Orders },
+       { path: "service", Component: Service },
+      ]
+  }
     ],
   },
 ]);
