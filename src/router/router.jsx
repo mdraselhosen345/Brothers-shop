@@ -31,12 +31,13 @@ import Dashboard from "../admin/AdminLayout/Dashboard";
 import AddProduct from "../admin/AdminLayout/AddProduct";
 import Products from "../admin/AdminLayout/Products";
 import Orders from "../admin/AdminLayout/Orders";
-import Homeservice from "../admin/AdminLayout/Service";
-import Service from "../admin/AdminLayout/Service";
 import AddModanCard from "../admin/AdminLayout/AddModanCard";
-
-
-
+import Computer from "../admin/AdminLayout/Computer";
+import Electrical from "../admin/AdminLayout/Electrical";
+import CCTV from "../admin/AdminLayout/CCTV";
+import GLASS from "../admin/AdminLayout/GLASS";
+import Pulmbing from "../admin/AdminLayout/Pulmbing";
+import ServiceCenter from "../admin/AdminLayout/ServiceCenter";
 
 
 
@@ -107,7 +108,12 @@ export const router = createBrowserRouter([
        { path: "add-modancard", Component: AddModanCard},
        { path: "products", Component: Products },
        { path: "orders", Component: Orders },
-       { path: "service", Component: Service },
+       { path: "Computer", Component: Computer},
+       { path: "Electrical", Component: Electrical},
+       { path: "CCTV", Component: CCTV},
+       { path: "GLASS", Component: GLASS},
+       { path: "pulmbing", Component: Pulmbing},
+       { path: "ServiceCenter", Component: ServiceCenter}
       ]
   }
     ],
