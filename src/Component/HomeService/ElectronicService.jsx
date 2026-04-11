@@ -1,6 +1,4 @@
-
 import React from 'react'
-// import Computer from "../../assets/Computer.png"
 import Electronic from "../../assets/Electronic.png"
 import { TbCoinTaka } from "react-icons/tb";
 import { GoSmiley } from "react-icons/go";
@@ -11,8 +9,31 @@ import { FaWhatsappSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { ImLocation2 } from "react-icons/im";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import Swal from 'sweetalert2';
 
 const ElectronicService = () => {
+  const handleSubmit = () => {
+  const name = document.querySelector('input[placeholder="Full Name"]')?.value;
+  const number = document.querySelector('input[placeholder="Number"]')?.value;
+  const location = document.querySelector('input[placeholder="Enter your location"]')?.value;
+  const problem = document.querySelector('textarea')?.value;
+
+  if (!name || !number || !location || !problem) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill all fields!"
+    });
+    return;
+  }
+
+  Swal.fire({
+    icon: "success",
+    title: "Submitted!",
+    text: "We will contact you soon 📞",
+    confirmButtonColor: "#F54927"
+  });
+};
   return (
     <div className='w-full'>
          <div className='flex flex-col lg:flex-row'> 
@@ -90,7 +111,7 @@ const ElectronicService = () => {
           <label className="label">Tell about the problem</label>
            <textarea rows="5" placeholder="Write here" className='bg-[#8A8A8A] rounded-xl px-3'></textarea>
 
-          <button className="btn btn-neutral mt-4 w-[320px]">Submit</button>
+          <button onClick={handleSubmit} className="btn btn-neutral mt-4 w-[320px]">Submit</button>
         </fieldset>
       </div>
     </div>

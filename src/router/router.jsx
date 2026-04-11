@@ -9,7 +9,7 @@ import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import ElectronicService from "../Component/HomeService/ElectronicService";
 import CCTVService from "../Component/HomeService/CCTVService";
 import GlassService from "../Component/HomeService/GlassService";
-import PlumbingService from "../Component/HomeService/PlumbingService";
+// import PlumbingService from "../Component/HomeService/PlumbingService";
 import ComputerService from "../Component/HomeService/ComputerService";
 import ServicingCenter from "../Component/ServicingCenter/ServicingCenter";
 import CardDetails from "../Component/CardDetails/CardDetails";
@@ -26,6 +26,7 @@ import HelpCenter from "../Component/Help&Support/HelpCenter";
 import Login from "../Component/Login/Login";
 import CreateAccount from "../Component/Login/CreateAccount";
 import Checkout from "../Component/Checkout/Checkout";
+
 import AdminLayout from "../admin/AdminLayout/AdminLayout";
 import Dashboard from "../admin/AdminLayout/Dashboard";
 import AddProduct from "../admin/AdminLayout/AddProduct";
@@ -38,6 +39,7 @@ import CCTV from "../admin/AdminLayout/CCTV";
 import GLASS from "../admin/AdminLayout/GLASS";
 import Pulmbing from "../admin/AdminLayout/Pulmbing";
 import ServiceCenter from "../admin/AdminLayout/ServiceCenter";
+import PlumbingService from "../Component/HomeService/PlumbingService";
 
 
 
@@ -94,6 +96,10 @@ export const router = createBrowserRouter([
           {
             path: "GlassService",
             Component: GlassService
+          },
+          {
+            path: "PlumbingService",
+            Component: PlumbingService
           },
         ],
       },

@@ -3,24 +3,44 @@ import { FaSquarePhoneFlip } from "react-icons/fa6";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { MdOutlineAccessTime } from "react-icons/md";
+import Swal from 'sweetalert2';
 
 const ServicingCenter = () => {
     const slides = [
     "https://i.ibb.co.com/5XxdYzFk/3.png",
-    // "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
-    // "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
     "https://i.postimg.cc/FKDrdZ2W/Chat-GPT-Image-Mar-4-2026-10-36-01-AM.png",
     ];
     
     const [current, setCurrent] = useState(0);
-    // Auto slide every 3 seconds
-              useEffect(() => {
-                const interval = setInterval(() => {
-                   setCurrent((prev) => (prev + 1) % slides.length);
-                   }, 3000);
-                 return () => clearInterval(interval);
-              }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+           setCurrent((prev) => (prev + 1) % slides.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+    // alart 
+    const handleSubmit = () => {
+    const name = document.querySelector('input[placeholder="Full Name"]').value;
+    const number = document.querySelector('input[placeholder="Number"]').value;
+    const location = document.querySelector('input[placeholder="Enter your location"]').value;
+    const problem = document.querySelector('textarea').value;
 
+    if (!name || !number || !location || !problem) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please fill all fields!'
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Submitted!',
+        text: 'We will contact you soon 📞',
+        confirmButtonColor: '#F54927'
+    });
+};
 
   return (  
      <div>
@@ -61,7 +81,6 @@ const ServicingCenter = () => {
   </div>
 </div>
   <div className='max-w-6xl mx-auto'>
-    {/* heding section */}
        <div className='text-center pt-10'>
           <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black'>Welcome to Our <span className='text-[#F54927]'>Service Center</span></h1>
           <h3 className='text-sm sm:text-base md:text-lg lg:text-xl pt-2 text-[#242424] font-semibold'>Professional Repair & Support For All Your Devices</h3>
@@ -70,11 +89,9 @@ const ServicingCenter = () => {
                              <h1 className='flex justify-between items-center text-[#0000FF] px-2 py-2 font-semibold gap-2 border-2 rounded-xl hover:scale-102 transition duration-300'><FaSquarePhoneFlip size={28}/>Contact: 01615458942</h1>
                              <h1 className='flex justify-between items-center text-[#000080] px-2 py-2 font-semibold gap-2 border-2 rounded-xl hover:scale-102 transition duration-300'><FaWhatsappSquare size={28}/>Whatsapp: 01782299570</h1>
                         </div>
-            
        </div>
 
       <div className='flex flex-col md:flex-row lg:flex-row mt-1 mb-2 px-4'>   
-        {/* left site */}
      <div className="w-full lg:w-1/2 px-4">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="card shadow-2xl bg-[#C0C0C0]">
@@ -93,13 +110,14 @@ const ServicingCenter = () => {
           <label className="label">Tell about the problem</label>
            <textarea rows="5" placeholder="Write here" className='bg-[#8A8A8A] rounded-xl px-3'></textarea>
 
-          <button className="btn btn-neutral mt-4 w-[320px]">Submit</button>
+          {/* ✅ ONLY CHANGE HERE */}
+          <button onClick={handleSubmit} className="btn btn-neutral mt-4 w-[320px]">Submit</button>
         </fieldset>
       </div>
     </div>
   </div>
      </div>
-      {/* right site */}
+{/*  goggle map */}
  <div className="w-full lg:w-1/2">
   <h1 className="text-2xl font-bold mb-2 mt-3 text-[#242424] px-2">Service Center Location</h1>
    <h3 className='text-xl text-[#3B3B3B] px-2 flex'><MdLocationOn className='pt-1' size={22}/>Location: Khagan Ashulia Savar</h3>
@@ -117,10 +135,9 @@ const ServicingCenter = () => {
          </div>
       </div>
   </div>
- 
   )
 }
 
-export default ServicingCenter
+export default ServicingCenter;
 
 
