@@ -40,6 +40,9 @@ import GLASS from "../admin/AdminLayout/GLASS";
 import Pulmbing from "../admin/AdminLayout/Pulmbing";
 import ServiceCenter from "../admin/AdminLayout/ServiceCenter";
 import PlumbingService from "../Component/HomeService/PlumbingService";
+import AuthCheck from "../admin/AdminLayout/AuthCheck";
+
+
 
 
 
@@ -119,7 +122,8 @@ export const router = createBrowserRouter([
        { path: "CCTV", Component: CCTV},
        { path: "GLASS", Component: GLASS},
        { path: "pulmbing", Component: Pulmbing},
-       { path: "ServiceCenter", Component: ServiceCenter}
+       { path: "ServiceCenter", Component: ServiceCenter},
+       { path: "authcheck", Component: AuthCheck}
       ]
   }
     ],

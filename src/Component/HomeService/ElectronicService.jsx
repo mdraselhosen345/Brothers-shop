@@ -12,6 +12,7 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import Swal from 'sweetalert2';
 
 const ElectronicService = () => {
+  
   const handleSubmit = () => {
   const name = document.querySelector('input[placeholder="Full Name"]')?.value;
   const number = document.querySelector('input[placeholder="Number"]')?.value;

@@ -11,6 +11,7 @@ const AdminLayout = () => {
         <Link to="/admin/add-product">Add Electronic Accessories</Link><br />
         <Link to="/admin/add-modancard">Add Modan Accessories</Link><br />
         <Link to="/admin/orders">Orders</Link> <br />
+        <Link to="/admin/authcheck">Auth Check</Link>
 
         {/* home service  */}
          <h2 className="text-xl font-bold mb-6 text-[#F54927]"> home Service Admin</h2>
