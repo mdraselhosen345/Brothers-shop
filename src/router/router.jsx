@@ -1,32 +1,29 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../Layout/Layout";
 import Home from "../Component/Home/Home";
-import Banner from "../Component/Banner/Banner";
-import Card from "../Component/Card/ModernCard";
-import Category from "../Component/Category/Category";
-import HomeService from "../Component/HomeService/HomeService";
+import Banner from "../Pages/Home/Banner/Banner";
+import Card from "../Pages/Home/Card/ModernCard";
+import Category from "../Pages/Home/Category/Category";
+import HomeService from "../Pages/Home/HomeService/HomeService";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
-import ElectronicService from "../Component/HomeService/ElectronicService";
-import CCTVService from "../Component/HomeService/CCTVService";
-import GlassService from "../Component/HomeService/GlassService";
-// import PlumbingService from "../Component/HomeService/PlumbingService";
-import ComputerService from "../Component/HomeService/ComputerService";
-import ServicingCenter from "../Component/ServicingCenter/ServicingCenter";
-import CardDetails from "../Component/CardDetails/CardDetails";
-import ModernCard from "../Component/Card/ModernCard";
-import ElectronicCard from "../Component/Card/ElectronicCard";
-import ElectronicDetails from "../Component/CardDetails/ElectronicDetails";
-import Support from "../Component/Help&Support/Support";
-import FAQs from "../Component/Help&Support/FAQs";
-import Contact from "../Component/Help&Support/Contact";
-import LiveChat from "../Component/Help&Support/LiveChat";
-import FeedBack from "../Component/Help&Support/FeedBack";
-import Account from "../Component/Help&Support/Account";
-import HelpCenter from "../Component/Help&Support/HelpCenter";
+import ElectronicService from "../Pages/Home/HomeService/ElectronicService";
+import CCTVService from "../Pages/Home/HomeService/CCTVService";
+import GlassService from "../Pages/Home/HomeService/GlassService";
+import ComputerService from "../Pages/Home/HomeService/ComputerService";
+import ServicingCenter from "../Pages/Home/ServicingCenter/ServicingCenter";
+import CardDetails from "../Pages/Home/CardDetails/CardDetails";
+import ModernCard from "../Pages/Home/Card/ModernCard";
+import ElectronicCard from "../Pages/Home/Card/ElectronicCard";
+import ElectronicDetails from "../Pages/Home/CardDetails/ElectronicDetails";
+import Support from "../Pages/Help&Support/Support";
+import FAQs from "../Pages/Help&Support/FAQs";
+import Contact from "../Pages/Help&Support/Contact";
+import LiveChat from "../Pages/Help&Support/LiveChat";
+import FeedBack from "../Pages/Help&Support/FeedBack";
+import Account from "../Pages/Help&Support/Account";
+import HelpCenter from "../Pages/Help&Support/HelpCenter";
 import Login from "../Component/Login/Login";
-import CreateAccount from "../Component/Login/CreateAccount";
+import CreateAccount from "../Component/Login/Register";
 import Checkout from "../Component/Checkout/Checkout";
-
 import AdminLayout from "../admin/AdminLayout/AdminLayout";
 import Dashboard from "../admin/AdminLayout/Dashboard";
 import AddProduct from "../admin/AdminLayout/AddProduct";
@@ -39,8 +36,11 @@ import CCTV from "../admin/AdminLayout/CCTV";
 import GLASS from "../admin/AdminLayout/GLASS";
 import Pulmbing from "../admin/AdminLayout/Pulmbing";
 import ServiceCenter from "../admin/AdminLayout/ServiceCenter";
-import PlumbingService from "../Component/HomeService/PlumbingService";
+import PlumbingService from "../Pages/Home/HomeService/PlumbingService";
 import AuthCheck from "../admin/AdminLayout/AuthCheck";
+//// new add 
+import RootLayout from "../Layouts/RootLayout";
+import Register from "../Component/Login/Register";
 
 
 
@@ -50,7 +50,7 @@ import AuthCheck from "../admin/AdminLayout/AuthCheck";
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Layout,
+    Component: RootLayoutLayout,
     errorElement: <ErrorPage />,
     children: [
       { index: true, Component: Home },
@@ -63,7 +63,7 @@ export const router = createBrowserRouter([
       { path: "Electronic/:id", Component: ElectronicDetails},
 
       { path: "Login", Component: Login},
-      { path: "CreateAccount", Component: CreateAccount},
+      { path: "Register", Component: Register},
 
       { path: "Checkout", Component: Checkout},
       // help & Support
